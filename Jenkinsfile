@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                checkout scm
+                def scmVars = checkout scm
             }
         }
         stage('Test') {
